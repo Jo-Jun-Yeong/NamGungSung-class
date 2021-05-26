@@ -18,7 +18,7 @@ public class Ch10_1to3 {
 //	Q7.	이 해의 몇일		
 		System.out.println("이 해의 몇일	:	" + today.get(Calendar.DAY_OF_YEAR));
 //	Q8.	요일(1~7 1:일요일)		
-		System.out.println("요일(1~7)	:	" + today.get(Calendar.DAY_OF_WEEK));
+		System.out.println("요일(1~7)		:	" + today.get(Calendar.DAY_OF_WEEK));
 //	Q9.	이 달의 몇번째 요일()	
 		System.out.println("이 달의 몇번째 요일 :	" + today.get(Calendar.DAY_OF_WEEK_IN_MONTH));
 //	Q10.오전_오후	(0 : 오전 / 1 : 오후)
