@@ -245,26 +245,111 @@ public class Nam_prac {
 		
 //		----------------------------------------------------------------		
 //		Q4-6 두 개의 주사위를 던졌을 때, 눈의 합이 6이 되는 모든 경우의 수를 출력하는 프로그램을 작성하시오.
-		int a = (int)(Math.random()*6+1);
-		int b = (int)(Math.random()*6+1);
+//		int a = (int)(Math.random()*6+1);
+//		int b = (int)(Math.random()*6+1);
 		
-		
-		int i = 1;
-		int sum = a+b;
-		while(i <= 36){
-		if(sum == 6) {
-			System.out.println("a+b : " + a + "+" + b +"="+ sum );
-			System.out.println(a +" "+b);
-		} // if
-		i++;
-		
-		} 	//while
-		
-//		System.out.println(a);
-//		System.out.println(b);
-//		-------------------------------------------------------------
+//		int c = 0;
+//		for(int i = 1; i<7; i++) {
+//			for(int j = 1; j<7; j++) {
+//				c  = i+j;
+//				if (c ==6) {
+//					System.out.println(i+"+"+j+"=6" );
+//				}
+//			} 	//for2
+//		} 	//for1
 		
 //		----------------------------------------------------------------		
-//		Q4-4
+//		Q4-7 Math.random()을 이용해서 1부터 6사이의 임의의 정수를 변수 value에 저장하는 코드를 완성하라. 
+//		(1)에 알맞은 코드를 넣으시오.
+		
+//		-> code
+		
+
+//		int value = (int)(Math.random()*6+1);
+//		System.out.println("value:"+value);
+//		
+		
+		
+//		----------------------------------------------------------------		
+//		Q4-8방정식 2x+4y=10의 모든 해를 구하시오.
+//		단, x와 y는 정수이고 각각의 범위는 0<=x<=10, 0<=y<=10 이다.
+		
+//		-> code
+//		int x, y;
+//		System.out.println("2x+4y=10 의 모든 해");
+//		System.out.println("->");
+//		for(int i = 0; i<=10; i++) { 		//x
+//			for(int j = 0; j<=10; j++) { 	//y
+//				
+//				
+//				if((2*i)+(4*j) == 10){
+//					System.out.println("x = "+ i);
+//					System.out.println("y = "+ j);
+//					System.out.println();					
+//				} 	//if
+//				
+//			} 	//for1
+//		} 	//for2
+		
+//		----------------------------------------------------------------		
+//		Q4-숫자로 이루어진 문자열 str이 있을 때, 각 자리의 합을 더한 결과를 출력하는 코 드를 완성하라. 
+//		만일 문자열이 "12345"라면, ‘1+2+3+4+5’의 결과인 15를 출력이 출력되 어야 한다. 
+//		(1)에 알맞은 코드를 넣으시오.
+//		[Hint] String클래스의 charAt(int i)을 사용
+		
+//		-> code
+		
+//		String str = "12345";
+//		int sum = 0;
+//		
+//		char ch = '0';
+//		
+//		System.out.println("str.length() : "+ str.length());
+//		System.out.println();
+//		
+//		for(int i =0; i<str.length(); i++) {
+//			
+//			sum = sum + (str.charAt(i)-'0');
+//			
+//			System.out.println("charAt["+i+"] : "+str.charAt(i));
+//			System.out.println("sum["+i+"] : "+sum);
+//			System.out.println();
+//		}
+		
+//		----------------------------------------------------------------		
+//		Q4-10 int타입의 변수 num 이 있을 때, 각 자리의 합을 더한 결과를 출력하는 코드를 완성하라. 
+//		만일 변수 num의 값이 12345라면, ‘1+2+3+4+5’의 결과인 15를 출력하라. 
+//		(1) 에 알맞은 코드를 넣으시오.
+//		[주의] 문자열로 변환하지 말고 숫자로만 처리해야 한다.
+		
+//		-> code
+//		
+		int num = 12345;
+		int sum = 0;
+		
+		for(int i = 1; i <=(int)(Math.log10(num)+1); i++) {
+			num = ((num%(10^i))/10^(i-1));
+			System.out.println("num ["+i+"]: "+num);
+			sum += num;
+			System.out.println("sum : "+sum);
+		}
+		System.out.println("sum : "+sum);
+		
+		
+		
+		
+//		----------------------------------------------------------------		
+//		Q
+//		----------------------------------------------------------------		
+//		Q
+//		----------------------------------------------------------------		
+//		Q
+//		----------------------------------------------------------------		
+//		Q
+		
+		
+		
+		
 		} //main
+
 } //class 
