@@ -112,11 +112,11 @@ public class Nam_prac_5 {
 //			money = money%coinUnit[i];
 //		}	//for
 //		----------------------------------------------------------------		
-//		Q-7문제 5-6에 동전의 개수를 추가한 프로그램이다. 
-//		커맨드라인으로부터 거슬러 줄 금액을 입력받아 계산한다. 
-//		보유한 동전의 개수로 거스름돈을 지불할 수 없으면, ‘거스름 돈이 부족합니다.’라고 출력하고 종료한다. 
-//		지불할 돈이 충분히 있으면, 거스름돈을 지불 한 만큼 가진 돈에서 빼고 남은 동전의 개수를 화면에 출력한다. 
-//		(1)에 알맞은 코드를 넣 어서 프로그램을 완성하시오.
+//		Q5-7 문제 5-6에 동전의 개수를 추가한 프로그램이다. 
+//			커맨드라인으로부터 거슬러 줄 금액을 입력받아 계산한다. 
+//			보유한 동전의 개수로 거스름돈을 지불할 수 없으면, ‘거스름 돈이 부족합니다.’라고 출력하고 종료한다. 
+//			지불할 돈이 충분히 있으면, 거스름돈을 지불 한 만큼 가진 돈에서 빼고 남은 동전의 개수를 화면에 출력한다. 
+//			(1)에 알맞은 코드를 넣 어서 프로그램을 완성하시오.
 		
 //		-> code
 		
@@ -141,16 +141,34 @@ public class Nam_prac_5 {
 				3. 금액에서 동전의 개수(coinNum)와 동전단위를 곱한 값을 뺀다.
 				 */
 				
-				//1~
-				coinNum = money/coinUnit[i]; 	//동전의 갯수
-				money = money%coinUnit[i]; 		//거스름 돈
+				//1
 				
-//				System.out.println(money);
-				System.out.println(coinUnit[i]+"원: "+coinNum); 	//~1 
 				
-				coin[i] = coin[i] - coinNum ? coin[i]<coinNum : coin ; 	//2
-//				?\금액-(동전갯수*동전단위)
+//				//2
+				
+				if(coin[i] < money%coinUnit[i])
+				{ 	//동전이 부족할 때
+					
+					money = money-(coinUnit[i]*coin[i]); 		//거스름 돈
+					
+					coin[i] = coin[i]-coin[i]; 	//거스름돈의 갯수
+					coinNum = 0; 	//동전의 갯수
+							
+				} 	//if
+				
+				else(coin[i] > money%coinUnit[i]) 	/6월 10일 왜 오류가 나는거지?
+				{ 	//동전이 충분할 때
+					
+					money = money%coinUnit[i];
+					coin[i]--; 
+					coinNum = money/coinUnit[i]; 	//동전의 갯수
+					
+				}	//else
+				
+				System.out.println(coinUnit[i]+"원: "+coinNum);
+				System.out.println(money);
 			} //for
+			
 			
 			if(money > 0) {
 				System.out.println("거스름돈이 부족합니다."); 
