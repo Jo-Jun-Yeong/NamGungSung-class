@@ -140,33 +140,31 @@ public class Nam_prac_5 {
 				2. 배열 coin에서 coinNum만큼의 동전을 뺀다. (만일 충분한 동전이 없다면 배열 coin에 있는 만큼만 뺀다.) 
 				3. 금액에서 동전의 개수(coinNum)와 동전단위를 곱한 값을 뺀다.
 				 */
-				
-				//1
-				
-				
-//				//2
-				
-				if(coin[i] < money%coinUnit[i])
-				{ 	//동전이 부족할 때
+			
+				if(coin[i] < (money/coinUnit[i]))			//부족할 때
+				{ 	
 					
 					money = money-(coinUnit[i]*coin[i]); 		//거스름 돈
 					
-					coin[i] = coin[i]-coin[i]; 	//거스름돈의 갯수
-					coinNum = 0; 	//동전의 갯수
+					coin[i] = coin[i]-coin[i]; 		//거스름돈의
+					coinNum = 5;	//동전의 갯수
 							
 				} 	//if
 				
-				else(coin[i] > money%coinUnit[i]) 	/6월 10일 왜 오류가 나는거지?
-				{ 	//동전이 충분할 때
+				else if(coin[i]>=(money/coinUnit[i])) 		//충분할 때
+				{ 	
+					coinNum = money/coinUnit[i]; 	//동전의 갯수	
 					
-					money = money%coinUnit[i];
-					coin[i]--; 
-					coinNum = money/coinUnit[i]; 	//동전의 갯수
-					
-				}	//else
+					money = money-(coinUnit[i]*(money/coinUnit[i]));
+						coin[i]=  coin[i]-(money/coinUnit[i]);			
+				}	//else if
+
+				
+				
 				
 				System.out.println(coinUnit[i]+"원: "+coinNum);
 				System.out.println(money);
+				coin[i] = coin[i] - coinNum;
 			} //for
 			
 			
@@ -178,6 +176,28 @@ public class Nam_prac_5 {
 			for(int i=0;i<coinUnit.length;i++) { 
 				System.out.println(coinUnit[i]+"원:"+coin[i]);
 			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 //		----------------------------------------------------------------		
 		
 	}		//main
