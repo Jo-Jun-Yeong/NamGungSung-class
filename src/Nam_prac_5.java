@@ -143,6 +143,7 @@ public class Nam_prac_5 {
 			
 				if(coin[i] < (money/coinUnit[i]))			//부족할 때
 				{ 	
+					System.out.println("부족");
 					
 					money = money-(coinUnit[i]*coin[i]); 		//거스름 돈
 					
@@ -153,18 +154,25 @@ public class Nam_prac_5 {
 				
 				else if(coin[i]>=(money/coinUnit[i])) 		//충분할 때
 				{ 	
-					coinNum = money/coinUnit[i]; 	//동전의 갯수	
+					System.out.println("충분");
+					
+					coinNum = (money/coinUnit[i] >= coin[i] ? 5 : money/coinUnit[i]); 	//동전의 갯수	
+					
+					coin[i]=  coin[i]-(money/coinUnit[i] >= coin[i] ? 5 : money/coinUnit[i]);	
 					
 					money = money-(coinUnit[i]*(money/coinUnit[i]));
-						coin[i]=  coin[i]-(money/coinUnit[i]);			
+					
+					
+				
+//					System.out.println("money: "+money);
 				}	//else if
 
 				
 				
 				
 				System.out.println(coinUnit[i]+"원: "+coinNum);
-				System.out.println(money);
-				coin[i] = coin[i] - coinNum;
+				System.out.println("money : "+money);
+//				coin[i] = coin[i];
 			} //for
 			
 			
