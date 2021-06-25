@@ -408,46 +408,44 @@ public class Nam_prac_5 {
 //		Q5-11 주어진 2차원 배열의 데이터보다 가로와 세로로 1이 더 큰 배열을 생성해서
 //			배열 의 행과 열의 마지막 요소에 각 열과 행의 총합을 저장하고 출력하는 프로그램이다.
 //			(1) 에 알맞은 코드를 넣어서 완성하시오.
-			int[][] score = {
-					{100, 100, 100}, 
-					{20, 20, 20} , 
-					{30, 30, 30} , 
-					{40, 40, 40} , 
-					{50, 50, 50}
-			};
-			
-			int[][] result = new int[score.length+1][score[0].length+1];
-			
-			for(int i=0; i < score.length;i++) { 
-				for(int j=0; j < score[i].length;j++) { //i는 최대2 j는 4
-					result[i][j] = score[i][j];
-					
-					result[i][score[i].length] += result[i][j]; 	//가로
-					
-					result[score.length][j] += result[i][j];  	//세로
-					result[score.length][score[j].length] += result[i][j];  	//세로
-					
-					
-//					result[score.length][j] = 55 ;  	//세로
-					
-					System.out.println(i);
-					//x=5고정 5 고정은 완료  y=3까지 i를 3까지 어떻게하나
-				/*
-				(1) 알맞은 코드를 넣어 완성하시오.
-				*/
-					
-				}	//for2
-				System.out.println( );
-			}	//for1
-//			System.out.println(result[0][result[0][3]]);
-			System.out.println(result.length);
-			
-			for(int i=0; i < result.length;i++) { 
-				for(int j=0; j < result[i].length;j++) {
-					System.out.printf("%4d",result[i][j]);
-				}
-				System.out.println();
-			}
+		
+//		->code
+		
+//			int[][] score = {
+//					{100, 100, 100}, 
+//					{20, 20, 20} , 
+//					{30, 30, 30} , 
+//					{40, 40, 40} , 
+//					{50, 50, 50}
+//			};
+//			
+//			int[][] result = new int[score.length+1][score[0].length+1];
+//			
+//			for(int i=0; i < score.length;i++) { 
+//				for(int j=0; j < score[i].length;j++) { //i는 최대2 j는 4
+//					result[i][j] = score[i][j];
+//					
+//					result[i][score[i].length] += result[i][j]; 	//가로
+//					
+//					result[score.length][j] += result[i][j];  	//세로
+//					result[score.length][score[j].length] += result[i][j];  	//세로
+//					
+//					//x=5고정 5 고정은 완료  y=3까지 i를 3까지 어떻게하나
+//				/*
+//				(1) 알맞은 코드를 넣어 완성하시오.
+//				*/
+//					
+//				}	//for2
+//				System.out.println( );
+//			}	//for1
+//
+//			
+//			for(int i=0; i < result.length;i++) { 
+//				for(int j=0; j < result[i].length;j++) {
+//					System.out.printf("%4d",result[i][j]);
+//				}
+//				System.out.println();
+//			}
 //		----------------------------------------------------		
 		
 	}		//main
